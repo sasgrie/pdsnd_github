@@ -1,5 +1,3 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
 #### 31 July 2021
 
 ## **Bikeshare Analysis App**
@@ -12,11 +10,12 @@ The analysis includes:
 * statistics on users
 
 ### Files used
+
 Data sets:
 * washington.csv (original data from [capital bikeshare](https://www.capitalbikeshare.com/system-data))
 * new_york_city.csv (original data from [Citi Bike](https://www.citibikenyc.com/system-data))
 * chicago.csv (original data from [Divvy Bikes](https://www.divvybikes.com/system-data))
 
 ### Credits
-Udacity course
+*Udacity course*
 
