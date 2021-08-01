@@ -171,22 +171,22 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def display_raw(df):
+def display_raw_data(df):
     """Displays (repeatedly) 5 rows of starting dataframe following user's input"""
     i = 0
-    display = input("Would you like to see the first 5 lines of raw data? Type 'yes' or 'no': ").lower() 
+    display_data = input("Would you like to see the first 5 lines of raw data? Type 'yes' or 'no': ").lower() 
     
     # loop and if to check for invalid input and to display additional rows if requested
     while True:
-        if display == 'no':
+        if display_data == 'no':
             break
-        elif display == 'yes' :
+        elif display_data == 'yes' :
             print(df[i:i+5])
-            display = input("\nWould you like to see next rows of raw data? Type 'yes' or 'no': ").lower()
+            display_data = input("\nWould you like to see next rows of raw data? Type 'yes' or 'no': ").lower()
             i += 5
         else:
             print("\nInvalid input. Please try again:")
-            display = input("\nWould you like to see first 5 rows of raw data? Type 'yes' or 'no': ").lower()
+            display_data = input("\nWould you like to see first 5 rows of raw data? Type 'yes' or 'no': ").lower()
             continue
 
 def main():
@@ -199,7 +199,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         
-        display_raw(df)
+        display_raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
