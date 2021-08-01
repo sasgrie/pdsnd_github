@@ -5,7 +5,7 @@ import pandas as pd
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
-#initalising lists for days and months that are being used in the functions
+#initalising lists for days and months that are being used in the functions incl. all
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december', 'all']
 DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 
@@ -21,7 +21,7 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     
     
-    # get user input for city, month, day using while loops to deal with incorrect input
+    # get user input for city, month & day using while loops to deal with incorrect input
     
     city = input('Choose for which city you want data displayed: Chicago, New York City, Washington:\n').lower()
     while city not in CITY_DATA.keys():
@@ -57,7 +57,7 @@ def load_data(city, month, day):
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
-    # extract month, day of week and hour from Start Time to create new columns
+    # extract month, day of week and hour from Start Time to create new columns for these
     df['month'] = df['Start Time'].dt.month
     df['weekday'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
@@ -176,7 +176,7 @@ def display_raw_data(df):
     i = 0
     display_data = input("Would you like to see the first 5 lines of raw data? Type 'yes' or 'no': ").lower() 
     
-    # loop and if to check for invalid input and to display additional rows if requested
+    # loop and if-clause to check for invalid input and to display additional rows if requested by user
     while True:
         if display_data == 'no':
             break
