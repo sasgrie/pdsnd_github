@@ -172,7 +172,7 @@ def user_stats(df):
     print('-'*40)
 
 def display_raw(df):
-    """Displays (repeatedly) 5 rows of starting dataframe following user's input"""
+    """Displays (repeatedly) 5 rows of starting dataframe following user input"""
     i = 0
     display = input("Would you like to see the first 5 lines of raw data? Type 'yes' or 'no': ").lower() 
     
